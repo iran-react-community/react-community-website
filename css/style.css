@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Ganjnameh';
+    src:url('../fonts/GanjNamehSans-Regular.woff2') format('woff2'),
+    url('../fonts/GanjNamehSans-Regular.woff') format('woff'),
+    url('../fonts/GanjNamehSans-Regular.ttf') format('truetype'),
+    url('../fonts/GanjNamehSans-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family : 'Ganjnameh', 'Varela Round' !important;
 }
