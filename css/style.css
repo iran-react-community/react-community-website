@@ -453,20 +453,3 @@ footer {
 
 }
 
-
-/*Rotate IRCLogo*/
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-#IRCLogo {
-    animation-name:            rotate;
-    animation-duration:        6s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
