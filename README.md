@@ -1,7 +1,10 @@
-<a href='http://iran-react-community.github.io' style="display:block; text-align:center"> 
+<div  style="text-align:center">
+<a href='http://iran-react-community.github.io'>
 <img src="https://github.com/iran-react-community/iran-react-community.github.io/raw/master/img/iran-react-community-logo.png" style="display:block;" height="60" alt='Iran React Community' aria-label='Iran React Community Web Site'/>
+<br/>
 وب سایت جامعه ری‌اکت ایران
 </a>
+</div>
 
 
 
