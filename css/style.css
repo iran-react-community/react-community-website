@@ -24,6 +24,9 @@ body {
     text-align : right;
 }
 
+#mainNav.navbar-shrink .nav-link:focus{
+    outline: none;
+}
 
 #mainNav {
     background-color : #ffffff;
@@ -449,3 +452,4 @@ footer {
     }
 
 }
+
