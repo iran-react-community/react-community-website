@@ -99,6 +99,5 @@
 <h4 lang="fa" dir="rtl" align="right">گروه لینکداین</h4>
 <p lang="fa" dir="rtl" align="right">
 برای عضویت به صفحه گروه رفته و بر روی دکمه درخواست عضویت کلیک نمایید.  
-
 <a href="https://www.linkedin.com/groups/8742016">لینک گروه لینکداین جامعه ری‌اکت ایران</a>
 </p>
