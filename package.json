@@ -10,7 +10,7 @@
     "prod": "NODE_ENV=production webpack -p --config webpack.production.config.js --progress --profile --colors && node ./express/production.js",
     "pm2": "NODE_ENV=production pm2 start ./express/production.js"
   },
-  "author": "",
+  "author": "iran-react-community",
   "license": "ISC",
   "dependencies": {
     "react": "^16.3.2",
