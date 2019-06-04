@@ -3,10 +3,10 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CleanWebpackPlugin = require('webpack-cleanup-plugin');
 
-const distDir = path.join(__dirname, '../dist');
-const srcDir = path.join(__dirname, '../src');
+const distDir = path.join(__dirname, './dist');
+const srcDir = path.join(__dirname, './src');
 
 module.exports = [
     {
@@ -50,7 +50,7 @@ module.exports = [
                                 loader: 'postcss-loader',
                                 options: {
                                     config: {
-                                        path: `${__dirname}/../postcss/postcss.config.js`,
+                                        path: `${__dirname}/postcss/postcss.config.js`,
                                     }
                                 }
                             }
@@ -124,7 +124,7 @@ module.exports = [
                             loader: 'postcss-loader',
                             options: {
                                 config: {
-                                    path: `${__dirname}/../postcss/postcss.config.js`,
+                                    path: `${__dirname}/postcss/postcss.config.js`,
                                 }
                             }
                         }
