@@ -1,2 +1,8 @@
-.idea/*
-startbootstrap-grayscale-master/*
+node_modules
+
+# Ignore build files
+dist
+
+# ignore IDE/Editors files
+.idea
+.vscode
