@@ -13,10 +13,10 @@
   "author": "iran-react-community",
   "license": "ISC",
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.2.2"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.3.0",
