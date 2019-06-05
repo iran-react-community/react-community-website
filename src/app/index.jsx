@@ -14,6 +14,10 @@ const Index = () => (
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
             ]}
             link={[{rel: "stylesheet", href: "/dist/styles.css"}]}
+            script={[
+                {src: "/dist/vendor.js", defer: undefined},
+                {src: "/dist/client.js", defer: undefined}
+            ]}
         />
         <Menu/>
         <Routes/>
