@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Helmet from 'react-helmet';
 import Menu from '~/app/components/Menu';
 import Routes from '~/app/routes/Routes';
 
 const Index = () => (
-    <>
+    <Fragment>
         <Helmet
             htmlAttributes={{lang: "en", amp: undefined}}
             titleTemplate="%s | React App"
@@ -17,7 +17,7 @@ const Index = () => (
         />
         <Menu/>
         <Routes/>
-    </>
+    </Fragment>
 );
 
 export default Index;
