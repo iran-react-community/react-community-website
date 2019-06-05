@@ -56,6 +56,28 @@ module.exports = [
                             }
                         ]
                     })
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|svg)$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[hash:base64:5].[ext]',
+                        publicPath: 'font/',
+                        outputPath: 'font/'
+                    }
+                },
+                {
+                    test: /\.(jpg|png)$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[hash:base64:5].[ext]',
+                        publicPath: 'img/',
+                        outputPath: 'img/'
+                    }
                 }
             ],
         },
@@ -129,6 +151,28 @@ module.exports = [
                             }
                         }
                     ]
+                },
+                {
+                    test: /\.(woff|woff2|eot|ttf|svg)$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[hash:base64:5].[ext]',
+                        publicPath: 'font/',
+                        outputPath: 'font/'
+                    }
+                },
+                {
+                    test: /\.(jpg|png)$/,
+                    exclude: /node_modules/,
+                    loader: 'file-loader',
+                    options: {
+                        limit: 1024,
+                        name: '[hash:base64:5].[ext]',
+                        publicPath: 'img/',
+                        outputPath: 'img/'
+                    }
                 }
             ],
         },
