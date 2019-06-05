@@ -21,7 +21,10 @@ module.exports = [
             publicPath: distDir,
         },
         resolve: {
-            extensions: ['.js', '.jsx']
+            extensions: ['.js', '.jsx'],
+            alias: {
+                '~': srcDir,
+            },
         },
         module: {
             rules: [
@@ -135,7 +138,10 @@ module.exports = [
             publicPath: distDir,
         },
         resolve: {
-            extensions: ['.js', '.jsx']
+            extensions: ['.js', '.jsx'],
+            alias: {
+                '~': srcDir,
+            },
         },
         module: {
             rules: [
