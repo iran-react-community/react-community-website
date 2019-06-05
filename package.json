@@ -46,6 +46,7 @@
     "postcss-scss": "^1.0.5",
     "stats-webpack-plugin": "^0.6.0",
     "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^3.11.0",
     "webpack-dev-middleware": "^2.0.6",
     "webpack-hot-middleware": "^2.22.1",
