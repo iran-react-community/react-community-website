@@ -15,7 +15,10 @@ module.exports = [
             publicPath: '/dist/',
         },
         resolve: {
-            extensions: ['.js', '.jsx']
+            extensions: ['.js', '.jsx'],
+            alias: {
+                '~': srcDir,
+            },
         },
         devtool: 'source-map',
         module: {
@@ -96,7 +99,10 @@ module.exports = [
             publicPath: '/dist/',
         },
         resolve: {
-            extensions: ['.js', '.jsx']
+            extensions: ['.js', '.jsx'],
+            alias: {
+                '~': srcDir,
+            },
         },
         module: {
             rules: [
