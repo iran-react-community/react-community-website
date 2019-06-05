@@ -1,11 +1,9 @@
 export default {
-    header: {
-        menu: {
-            home: 'صفحه اصلی',
-            contactUs: 'ارتباط با ما',
-            aboutUs: 'درباره ما',
-            logo: 'IRC نسخه بتا',
-        },
+    menu: {
+        home: 'صفحه اصلی',
+        contactUs: 'ارتباط با ما',
+        aboutUs: 'درباره ما',
+        logo: 'IRC نسخه بتا',
     },
     page: {
         home: {
