@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const CleanWebpackPlugin = require('webpack-cleanup-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const distDir = path.join(__dirname, './dist');
 const srcDir = path.join(__dirname, './src');
@@ -82,6 +82,7 @@ module.exports = [
             ],
         },
         plugins: [
+            new CleanWebpackPlugin(),
             new ExtractTextPlugin({
                 filename: 'styles.css',
                 allChunks: true
@@ -91,7 +92,6 @@ module.exports = [
                     NODE_ENV: '"production"'
                 }
             }),
-            new CleanWebpackPlugin(distDir),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false,
