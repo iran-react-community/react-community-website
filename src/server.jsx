@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import {StaticRouter} from 'react-router-dom';
-import {Helmet} from "react-helmet";
+import {Helmet} from 'react-helmet';
 import Template from '~/utils/template';
 import Index from '~/app';
 
