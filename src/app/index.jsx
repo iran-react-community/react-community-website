@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
 import {Switch, Route} from 'react-router-dom';
-import {Link, NavLink} from 'react-router-dom';
-import styles from '../styles/styles.pcss';
+import {NavLink} from 'react-router-dom';
+import styles from '~/styles/styles.pcss';
 
 class Menu extends Component {
     render() {
@@ -27,7 +27,7 @@ class Menu extends Component {
 
 class Homepage extends Component {
 
-    render () {
+    render() {
         return (
             <div className={styles.component}>
                 <Helmet title="Welcome to our Homepage"/>
@@ -39,7 +39,7 @@ class Homepage extends Component {
 }
 
 class About extends Component {
-    render () {
+    render() {
         return (
             <div>
                 <Helmet title="About us"/>
@@ -51,7 +51,7 @@ class About extends Component {
 }
 
 class Contact extends Component {
-    render () {
+    render() {
         return (
             <div>
                 <Helmet title="Contact us"/>
@@ -63,9 +63,9 @@ class Contact extends Component {
 }
 
 
-export default class App extends Component {
+export default class Index extends Component {
 
-    render () {
+    render() {
         return (
             <div>
                 <Helmet
@@ -77,6 +77,7 @@ export default class App extends Component {
                         {name: "viewport", content: "width=device-width, initial-scale=1"},
                     ]}
                     link={[{rel: "stylesheet", href: "/dist/styles.css"}]}
+                    script={[{src: "/dist/client.js", type: "text/javascript", defer: true}]}
                 />
                 <Switch>
                     <Route exact path='/' component={Homepage}/>
