@@ -1,7 +1,7 @@
 {
   "presets": [
-    "react",
-    "env"
+    "@babel/react",
+    "@babel/preset-env"
   ],
   "env": {
     "development" : {
