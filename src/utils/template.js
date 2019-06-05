@@ -8,8 +8,8 @@ export default ({ markup, helmet }) => {
 				</head>
 				<body ${helmet.bodyAttributes.toString()}>
 					<div id="root">${markup}</div>
+					<script src="/dist/vendor.js" async></script>
 					<script src="/dist/client.js" defer></script>
-					<script src="/dist/vendor.js" defer></script>
 				</body>
 			</html>`;
 };
