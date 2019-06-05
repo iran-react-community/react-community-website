@@ -42,7 +42,7 @@ module.exports = [
                                 options: {
                                     modules: true,
                                     importLoaders: 1,
-                                    localIdentName: '[hash:base64:10]',
+                                    localIdentName: '[hash:base64:5]',
                                     sourceMap: false,
                                 }
                             },
@@ -116,7 +116,7 @@ module.exports = [
                             options: {
                                 modules: true,
                                 importLoaders: 1,
-                                localIdentName: '[hash:base64:10]',
+                                localIdentName: '[hash:base64:5]',
                                 sourceMap: false
                             }
                         },
