@@ -14,10 +14,13 @@ module.exports = [
     {
         name: 'client',
         target: 'web',
-        entry: `${srcDir}/client.jsx`,
+        entry: {
+            client: `${srcDir}/client.jsx`,
+            vendor: ['react', 'react-dom', 'react-helmet', 'react-router-dom'],
+        },
         output: {
             path: distDir,
-            filename: 'client.js',
+            filename: '[name].js',
             publicPath: distDir,
         },
         resolve: {
@@ -100,18 +103,11 @@ module.exports = [
                     NODE_ENV: '"production"'
                 }
             }),
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false,
-                    screw_ie8: true,
-                    drop_console: true,
-                    drop_debugger: true
-                }
-            }),
             new UglifyJsPlugin({
                 uglifyOptions: {
                     compress: {
                         warnings: false,
+                        // screw_ie8: true,
                         drop_console: true,
                         drop_debugger: true
                     },
@@ -123,6 +119,11 @@ module.exports = [
                         beautify: false,
                     }
                 }
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name:'vendor',
+                filename: '[name].js',
+                minChunks: Infinity,
             }),
             new webpack.optimize.OccurrenceOrderPlugin(),
         ]

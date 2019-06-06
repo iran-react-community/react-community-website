@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const distDir = path.join(__dirname, './dist');
@@ -8,11 +9,14 @@ module.exports = [
     {
         name: 'client',
         target: 'web',
-        entry: `${srcDir}/client.jsx`,
+        entry: {
+            client: `${srcDir}/client.jsx`,
+            vendor: ['react', 'react-dom', 'react-helmet', 'react-router-dom'],
+        },
         output: {
-            path: path.join(__dirname, 'dist'),
-            filename: 'client.js',
-            publicPath: '/dist/',
+            path: distDir,
+            filename: '[name].js',
+            publicPath: distDir,
         },
         resolve: {
             extensions: ['.js', '.jsx'],
@@ -85,7 +89,12 @@ module.exports = [
             new ExtractTextPlugin({
                 filename: 'styles.css',
                 allChunks: true
-            })
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name:'vendor',
+                filename: '[name].js',
+                minChunks: Infinity,
+            }),
         ]
     },
     {
@@ -93,10 +102,10 @@ module.exports = [
         target: 'node',
         entry: `${srcDir}/server.jsx`,
         output: {
-            path: path.join(__dirname, 'dist'),
+            path: distDir,
             filename: 'server.js',
             libraryTarget: 'commonjs2',
-            publicPath: '/dist/',
+            publicPath: distDir,
         },
         resolve: {
             extensions: ['.js', '.jsx'],
