@@ -95,7 +95,7 @@ module.exports = [
         plugins: [
             new CleanWebpackPlugin(),
             new ExtractTextPlugin({
-                filename: 'css/çstyles.css',
+                filename: 'css/styles.css',
                 allChunks: true
             }),
             new OptimizeCssAssetsPlugin({
