@@ -3,6 +3,7 @@ import {NavLink} from "react-router-dom";
 import styles from "~/styles/styles.pcss";
 import routesNames from '~/utils/routesNames';
 import contentWords from '~/utils/contentWords';
+import logo from '~/assets/iran-react-community.png';
 
 const {
     home: toHome,
@@ -17,7 +18,7 @@ const {
 } = contentWords.menu;
 
 const Menu = () => (
-    <ul>
+    <ul className={styles.menu}>
         <li>
             <NavLink exact to={toHome} activeClassName={styles.active}>{home}</NavLink>
         </li>
@@ -26,6 +27,11 @@ const Menu = () => (
         </li>
         <li>
             <NavLink to={toContactUs} activeClassName={styles.active}>{contactUs}</NavLink>
+        </li>
+        <li>
+            <NavLink to={toContactUs} activeClassName={styles.active}>
+                <img src={logo} alt="iran-react-community-logo"/>
+            </NavLink>
         </li>
     </ul>
 );
