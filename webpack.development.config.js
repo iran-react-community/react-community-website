@@ -2,7 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const distDir = path.join(__dirname, './dist');
+const assetsDirName = 'assets';
+const outputImagesDirName = 'img';
+const outputFontsDirName = 'font';
+
+const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
 
 module.exports = [
