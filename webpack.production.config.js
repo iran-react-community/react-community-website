@@ -6,6 +6,9 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const assetsDirName = 'assets';
+const outputImagesDirName = 'img';
+const outputFontsDirName = 'font';
 
 const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
