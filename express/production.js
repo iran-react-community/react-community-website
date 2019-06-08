@@ -7,7 +7,7 @@ const ServerRendererPath = path.join(__dirname, `./../${assetsDirName}/js/server
 const ServerRenderer = require(ServerRendererPath).default;
 const Stats = require(ClientStatsPath);
 
-app.use(`/${assetsDirName}/js`, express.static(path.join(__dirname, `../${assetsDirName}/js`)));
+app.use(`/${assetsDirName}`, express.static(path.join(__dirname, `../${assetsDirName}`)));
 app.use(ServerRenderer(Stats));
 
 const PORT = process.env.PORT || 3000;
