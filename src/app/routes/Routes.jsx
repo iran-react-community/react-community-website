@@ -1,8 +1,6 @@
 import React, {memo} from 'react';
-import {Switch, Route} from 'react-router-dom';
-import Home from '~/app/pages/Home';
-import ContactUs from '~/app/pages/ContactUs';
-import AboutUs from '~/app/pages/AboutUs';
+import {Switch, Route, Redirect} from 'react-router-dom';
+import { Home, AboutUs, ContactUs, NotFound } from '~/app/pages';
 import routesNames from '~/utils/routesNames';
 
 const {
