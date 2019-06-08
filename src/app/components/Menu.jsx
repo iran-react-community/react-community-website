@@ -4,7 +4,7 @@ import css from 'classnames';
 import styles from '~/styles/styles.pcss';
 import routesNames from '~/utils/routesNames';
 import contentWords from '~/utils/contentWords';
-import logo from '~/assets/iran-react-community.png';
+import logo from '~/staticImages/iran-react-community.png';
 
 const {
     home: toHome,
