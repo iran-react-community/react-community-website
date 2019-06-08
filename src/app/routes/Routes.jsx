@@ -7,6 +7,8 @@ const {
     home,
     contactUs,
     aboutUs,
+    notFound,
+    anythingElse,
 } = routesNames;
 
 const Routes = () => (
@@ -14,6 +16,8 @@ const Routes = () => (
         <Route exact path={home} component={Home}/>
         <Route path={contactUs} component={ContactUs}/>
         <Route path={aboutUs} component={AboutUs}/>
+        <Route path={notFound} component={NotFound}/>
+        <Redirect from={anythingElse} to={notFound}/>
     </Switch>
 );
 
