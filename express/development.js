@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const assetsDirName = 'assets';
 const webpack = require('webpack');
 const config = require('./../webpack.development.config.js');
 const compiler = webpack(config);
@@ -9,7 +10,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
 
 app.use(webpackDevMiddleware(compiler, {
-    publicPath: "/dist/",
+    publicPath: `/${assetsDirName}`,
 }));
 app.use(webpackHotMiddleware(compiler.compilers.find(compiler => compiler.name === 'client')));
 app.use(webpackHotServerMiddleware(compiler));
