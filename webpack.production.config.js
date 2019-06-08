@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 
-const distDir = path.join(__dirname, './dist');
+const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
 
 module.exports = [
@@ -20,7 +20,7 @@ module.exports = [
         },
         output: {
             path: distDir,
-            filename: '[name].js',
+            filename: 'js/[name].js',
             publicPath: distDir,
         },
         resolve: {
@@ -72,19 +72,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],
@@ -92,7 +92,7 @@ module.exports = [
         plugins: [
             new CleanWebpackPlugin(),
             new ExtractTextPlugin({
-                filename: 'styles.css',
+                filename: 'css/çstyles.css',
                 allChunks: true
             }),
             new OptimizeCssAssetsPlugin({
@@ -121,8 +121,8 @@ module.exports = [
                 }
             }),
             new webpack.optimize.CommonsChunkPlugin({
-                name:'vendor',
-                filename: '[name].js',
+                name: 'vendor',
+                filename: 'js/[name].js',
                 minChunks: Infinity,
             }),
             new webpack.optimize.OccurrenceOrderPlugin(),
@@ -134,7 +134,7 @@ module.exports = [
         entry: `${srcDir}/server.jsx`,
         output: {
             path: distDir,
-            filename: 'server.js',
+            filename: 'js/server.js',
             libraryTarget: 'commonjs2',
             publicPath: distDir,
         },
@@ -187,19 +187,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],
