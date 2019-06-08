@@ -2,7 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const distDir = path.join(__dirname, './dist');
+const assetsDirName = 'assets';
+const outputImagesDirName = 'img';
+const outputFontsDirName = 'font';
+
+const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
 
 module.exports = [
@@ -15,7 +19,7 @@ module.exports = [
         },
         output: {
             path: distDir,
-            filename: '[name].js',
+            filename: 'js/[name].js',
             publicPath: distDir,
         },
         resolve: {
@@ -68,31 +72,31 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],
         },
         plugins: [
             new ExtractTextPlugin({
-                filename: 'styles.css',
+                filename: 'css/styles.css',
                 allChunks: true
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name:'vendor',
-                filename: '[name].js',
+                filename: 'js/[name].js',
                 minChunks: Infinity,
             }),
         ]
@@ -103,7 +107,7 @@ module.exports = [
         entry: `${srcDir}/server.jsx`,
         output: {
             path: distDir,
-            filename: 'server.js',
+            filename: 'js/server.js',
             libraryTarget: 'commonjs2',
             publicPath: distDir,
         },
@@ -156,19 +160,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],

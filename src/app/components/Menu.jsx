@@ -1,8 +1,10 @@
 import React, {memo} from 'react';
-import {NavLink} from "react-router-dom";
-import styles from "~/styles/styles.pcss";
+import {NavLink} from 'react-router-dom';
+import css from 'classnames';
+import styles from '~/styles/styles.pcss';
 import routesNames from '~/utils/routesNames';
 import contentWords from '~/utils/contentWords';
+import logo from '~/staticImages/iran-react-community.png';
 
 const {
     home: toHome,
@@ -17,17 +19,18 @@ const {
 } = contentWords.menu;
 
 const Menu = () => (
-    <ul>
-        <li>
-            <NavLink exact to={toHome} activeClassName={styles.active}>{home}</NavLink>
-        </li>
-        <li>
-            <NavLink to={toAboutUs} activeClassName={styles.active}>{aboutUs}</NavLink>
-        </li>
-        <li>
-            <NavLink to={toContactUs} activeClassName={styles.active}>{contactUs}</NavLink>
-        </li>
-    </ul>
+    <nav className={styles.menu}>
+        <NavLink exact to={toHome} className={styles['menu__item']}
+                 activeClassName={styles['menu__active']}>{home}</NavLink>
+        <NavLink to={toAboutUs} className={styles['menu__item']}
+                 activeClassName={styles['menu__active']}>{aboutUs}</NavLink>
+        <NavLink to={toContactUs} className={styles['menu__item']}
+                 activeClassName={styles['menu__active']}>{contactUs}</NavLink>
+        <NavLink to={toHome} className={css(styles['menu__item'], styles['menu__item--the-last'])}
+                 activeClassName={styles['menu__active']}>
+            <img src={logo} alt="iran-react-community-logo"/>
+        </NavLink>
+    </nav>
 );
 
 export default memo(Menu);

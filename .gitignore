@@ -2,6 +2,8 @@ node_modules
 
 # Ignore build files
 dist
+build
+assets
 
 # ignore IDE/Editors files
 .idea
