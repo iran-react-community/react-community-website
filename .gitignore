@@ -2,7 +2,15 @@ node_modules
 
 # Ignore build files
 dist
+build
+assets
 
 # ignore IDE/Editors files
 .idea
 .vscode
+
+# unwanted OS files
+.DS_Store
+*/.DS_Store
+thumbs.db
+*/thumbs.db

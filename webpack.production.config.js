@@ -6,18 +6,24 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const assetsDirName = 'assets';
+const outputImagesDirName = 'img';
+const outputFontsDirName = 'font';
 
-const distDir = path.join(__dirname, './dist');
+const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
 
 module.exports = [
     {
         name: 'client',
         target: 'web',
-        entry: `${srcDir}/client.jsx`,
+        entry: {
+            client: `${srcDir}/client.jsx`,
+            vendor: ['react', 'react-dom', 'react-helmet', 'react-router-dom'],
+        },
         output: {
             path: distDir,
-            filename: 'client.js',
+            filename: 'js/[name].js',
             publicPath: distDir,
         },
         resolve: {
@@ -69,19 +75,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],
@@ -89,7 +95,7 @@ module.exports = [
         plugins: [
             new CleanWebpackPlugin(),
             new ExtractTextPlugin({
-                filename: 'styles.css',
+                filename: 'css/styles.css',
                 allChunks: true
             }),
             new OptimizeCssAssetsPlugin({
@@ -100,18 +106,11 @@ module.exports = [
                     NODE_ENV: '"production"'
                 }
             }),
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false,
-                    screw_ie8: true,
-                    drop_console: true,
-                    drop_debugger: true
-                }
-            }),
             new UglifyJsPlugin({
                 uglifyOptions: {
                     compress: {
                         warnings: false,
+                        // screw_ie8: true,
                         drop_console: true,
                         drop_debugger: true
                     },
@@ -124,6 +123,11 @@ module.exports = [
                     }
                 }
             }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name: 'vendor',
+                filename: 'js/[name].js',
+                minChunks: Infinity,
+            }),
             new webpack.optimize.OccurrenceOrderPlugin(),
         ]
     },
@@ -133,7 +137,7 @@ module.exports = [
         entry: `${srcDir}/server.jsx`,
         output: {
             path: distDir,
-            filename: 'server.js',
+            filename: 'js/server.js',
             libraryTarget: 'commonjs2',
             publicPath: distDir,
         },
@@ -186,19 +190,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[hash:base64:5].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],

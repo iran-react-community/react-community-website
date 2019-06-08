@@ -1,18 +1,26 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const distDir = path.join(__dirname, './dist');
+const assetsDirName = 'assets';
+const outputImagesDirName = 'img';
+const outputFontsDirName = 'font';
+
+const distDir = path.join(__dirname, assetsDirName);
 const srcDir = path.join(__dirname, './src');
 
 module.exports = [
     {
         name: 'client',
         target: 'web',
-        entry: `${srcDir}/client.jsx`,
+        entry: {
+            client: `${srcDir}/client.jsx`,
+            vendor: ['react', 'react-dom', 'react-helmet', 'react-router-dom'],
+        },
         output: {
-            path: path.join(__dirname, 'dist'),
-            filename: 'client.js',
-            publicPath: '/dist/',
+            path: distDir,
+            filename: 'js/[name].js',
+            publicPath: distDir,
         },
         resolve: {
             extensions: ['.js', '.jsx'],
@@ -64,28 +72,33 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],
         },
         plugins: [
             new ExtractTextPlugin({
-                filename: 'styles.css',
+                filename: 'css/styles.css',
                 allChunks: true
-            })
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name:'vendor',
+                filename: 'js/[name].js',
+                minChunks: Infinity,
+            }),
         ]
     },
     {
@@ -93,10 +106,10 @@ module.exports = [
         target: 'node',
         entry: `${srcDir}/server.jsx`,
         output: {
-            path: path.join(__dirname, 'dist'),
-            filename: 'server.js',
+            path: distDir,
+            filename: 'js/server.js',
             libraryTarget: 'commonjs2',
-            publicPath: '/dist/',
+            publicPath: distDir,
         },
         resolve: {
             extensions: ['.js', '.jsx'],
@@ -147,19 +160,19 @@ module.exports = [
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'font/',
-                        outputPath: 'font/'
+                        publicPath: `/${assetsDirName}/${outputFontsDirName}`,
+                        outputPath: outputFontsDirName,
                     }
                 },
                 {
                     test: /\.(jpg|png)$/,
                     exclude: /node_modules/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         limit: 1024,
                         name: '[name].[ext]',
-                        publicPath: 'img/',
-                        outputPath: 'img/'
+                        publicPath: `/${assetsDirName}/${outputImagesDirName}`,
+                        outputPath: outputImagesDirName,
                     }
                 }
             ],

@@ -13,5 +13,8 @@ export default {
             },
             subTitle: 'جامعه‌ غیرانحصاری و مشارکت جمعی توسعه‌دهندگان React و React Native'
         },
+        notFound: {
+            title: 'صفحه مورد نظر پیدا نشد.',
+        }
     },
 };
