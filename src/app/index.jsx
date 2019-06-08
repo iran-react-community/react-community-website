@@ -13,10 +13,10 @@ const Index = () => (
                 {name: "description", content: "Iran React Community"},
                 {name: "viewport", content: "width=device-width, initial-scale=1"},
             ]}
-            link={[{rel: "stylesheet", href: "/dist/styles.css"}]}
+            link={[{rel: "stylesheet", href: "/assets/css/styles.css"}]}
             script={[
-                {src: "/dist/vendor.js", defer: undefined},
-                {src: "/dist/client.js", defer: undefined}
+                {src: "/assets/js/vendor.js", defer: undefined},
+                {src: "/assets/js/client.js", defer: undefined},
             ]}
         />
         <Menu/>
