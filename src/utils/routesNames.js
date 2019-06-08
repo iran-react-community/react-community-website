@@ -2,7 +2,7 @@ const forwardSlash = '/';
 
 export default {
     home: forwardSlash,
-    contactUs: forwardSlash + 'تماس-با-ما',
+    contactUs: forwardSlash + 'ارتباط-با-ما',
     aboutUs: forwardSlash + 'درباره-ما',
     notFound: forwardSlash + '404',
     anythingElse: '/**/',
