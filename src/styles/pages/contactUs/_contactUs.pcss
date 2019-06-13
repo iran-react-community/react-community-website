@@ -1,3 +1,24 @@
+/* @define contact us */
 .contact-us {
-    color: var(--active);
+    @extend %align-col-rev;
+    @extend %align-items-center;
+    background: var(--black);
+    height: 100%;
+
+    &__paper-wrapper {
+        @extend %align-row;
+        width: var(--about-us-width);
+        justify-content: space-between;
+        color: var(--passive-text-color);
+        font-size: var(--list-font-size);
+
+        *[class^='icon-'] {
+            color: var(--active);
+            font-size: 30px;
+        }
+
+        a {
+            color: var(--active);
+        }
+    }
 }
