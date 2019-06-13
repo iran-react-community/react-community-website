@@ -83,6 +83,12 @@ export default {
                 },
             },
         },
+        contactUs: {
+            address: 'آدرس',
+            mail: 'ایمیل',
+            city: 'Iran, Tehran',
+            email: 'iran-react-community@gmail.com',
+        }
     },
     components: {
         menu: {
