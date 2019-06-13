@@ -1,3 +1,26 @@
 .home {
-    color: var(--active);
+    @extend %align-col;
+    @extend %align-items-center;
+    flex-grow: 1;
+    background: url("./img/iran-react-community-bg.jpg");
+    background-size: cover;
+
+    &__en-title {
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2));
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0.8rem;
+        line-height: 2.5rem;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase!important;
+        background-clip: text;
+    }
+
+    &__fa-title {
+        color: var(--white);
+    }
+
+    &__sub-title {
+        color: var(--white);
+    }
 }
