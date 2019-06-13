@@ -1,10 +1,4 @@
 export default {
-    menu: {
-        home: 'صفحه اصلی',
-        contactUs: 'ارتباط با ما',
-        aboutUs: 'درباره جامعه',
-        logo: 'IRC نسخه بتا',
-    },
     page: {
         home: {
             title: {
@@ -89,5 +83,14 @@ export default {
                 },
             },
         },
+    },
+    components: {
+        menu: {
+            home: 'صفحه اصلی',
+            contactUs: 'ارتباط با ما',
+            aboutUs: 'درباره جامعه',
+            logo: 'IRC نسخه بتا',
+        },
+        kopiLeft: 'KopiLeft  -  (ꓘ)  -  IRAN REACT COMMUNITY 2019',
     },
 };
