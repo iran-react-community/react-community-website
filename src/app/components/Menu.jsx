@@ -1,6 +1,5 @@
 import React, {memo} from 'react';
 import {NavLink} from 'react-router-dom';
-import css from 'classnames';
 import styles from '~/styles/styles.pcss';
 import routesNames from '~/utils/routesNames';
 import contentWords from '~/utils/contentWords';
@@ -16,7 +15,7 @@ const {
     home,
     contactUs,
     aboutUs
-} = contentWords.menu;
+} = contentWords.components.menu;
 
 const Menu = () => (
     <nav className={styles.menu}>
@@ -26,9 +25,8 @@ const Menu = () => (
                  activeClassName={styles['menu__active']}>{aboutUs}</NavLink>
         <NavLink to={toContactUs} className={styles['menu__item']}
                  activeClassName={styles['menu__active']}>{contactUs}</NavLink>
-        <NavLink to={toHome} className={css(styles['menu__item'], styles['menu__item--the-last'])}
-                 activeClassName={styles['menu__active']}>
-            <img src={logo} alt="iran-react-community-logo"/>
+        <NavLink to={toHome} className={styles['menu__item--the-last']}>
+            <img src={logo} className={styles['menu__logo']} alt="iran-react-community-logo"/>
         </NavLink>
     </nav>
 );

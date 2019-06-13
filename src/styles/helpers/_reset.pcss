@@ -1,44 +1,121 @@
-/** @define reset css; */
-
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
 
 html {
-   box-sizing: border-box; /* Amer Custom CSS */
-   font: normal 20px/1.7 'sans'; /* Amer Custom CSS */
-   color: var(--text-color); /* Amer Custom CSS */
-   -ms-text-size-adjust: 100%; /* 2 */
-   -webkit-text-size-adjust: 100%; /* 2 */
+    box-sizing: border-box;
+    font: normal 20px/1.7 'ganj';
+    color: var(--default-text-color);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 
 html *, *::after, *::before {
-   box-sizing: inherit;
-   direction: rtl;
-   font: inherit;
-   font-family: inherit !important;
+    box-sizing: inherit;
+    direction: rtl;
+    font: inherit;
+    font-family: inherit !important;
 }
 
-/* Sections
-   ========================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ins {
+    background-color: var(--yell);
+    color: var(--black);
+    text-decoration: none;
+}
+
+mark {
+    background-color: var(--yell);
+    color: var(--black);
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+// ------------------------------------------ Community Costum
 
 body {
-   margin: 0;
+    margin: 0;
 }
 
 ul, ol {
-   list-style: none;
+    list-style: none;
 }
 
 /**
@@ -51,7 +128,7 @@ footer,
 header,
 nav,
 section {
-   display: block;
+    display: block;
 }
 
 /**
@@ -60,8 +137,8 @@ section {
  */
 
 h1 {
-   font-size: 2em;
-   margin: 0.67em 0;
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -74,8 +151,8 @@ h1 {
 
 figcaption,
 figure,
-main { /* 1 */
-   display: block;
+main {
+    display: block;
 }
 
 /**
@@ -83,7 +160,7 @@ main { /* 1 */
  */
 
 figure {
-   margin: 1em 40px;
+    margin: 1em 40px;
 }
 
 /**
@@ -92,9 +169,9 @@ figure {
  */
 
 hr {
-   box-sizing: content-box; /* 1 */
-   height: 0; /* 1 */
-   overflow: visible; /* 2 */
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
 }
 
 /**
@@ -103,8 +180,8 @@ hr {
  */
 
 pre {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 /* Text-level semantics
@@ -116,9 +193,9 @@ pre {
  */
 
 a {
-   background-color: transparent; /* 1 */
-   -webkit-text-decoration-skip: objects; /* 2 */
-   text-decoration: none; /* Amer Custom CSS */
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    text-decoration: none;
 }
 
 /**
@@ -127,9 +204,9 @@ a {
  */
 
 abbr[title] {
-   border-bottom: none; /* 1 */
-   text-decoration: underline; /* 2 */
-   text-decoration: underline dotted; /* 2 */
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
 }
 
 /**
@@ -138,7 +215,7 @@ abbr[title] {
 
 b,
 strong {
-   font-weight: inherit;
+    font-weight: inherit;
 }
 
 /**
@@ -147,7 +224,7 @@ strong {
 
 b,
 strong {
-   font-weight: bolder;
+    font-weight: bolder;
 }
 
 /**
@@ -158,8 +235,8 @@ strong {
 code,
 kbd,
 samp {
-   font-family: monospace, monospace; /* 1 */
-   font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 /**
@@ -167,7 +244,7 @@ samp {
  */
 
 dfn {
-   font-style: italic;
+    font-style: italic;
 }
 
 /**
@@ -175,8 +252,8 @@ dfn {
  */
 
 mark {
-   background-color: #ff0;
-   color: #000;
+    background-color: #ff0;
+    color: #000;
 }
 
 /**
@@ -184,7 +261,7 @@ mark {
  */
 
 small {
-   font-size: 80%;
+    font-size: 80%;
 }
 
 /**
@@ -194,18 +271,18 @@ small {
 
 sub,
 sup {
-   font-size: 75%;
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 sub {
-   bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-   top: -0.5em;
+    top: -0.5em;
 }
 
 /* Embedded content
@@ -217,7 +294,7 @@ sup {
 
 audio,
 video {
-   display: inline-block;
+    display: inline-block;
 }
 
 /**
@@ -225,8 +302,8 @@ video {
  */
 
 audio:not([controls]) {
-   display: none;
-   height: 0;
+    display: none;
+    height: 0;
 }
 
 /**
@@ -234,7 +311,7 @@ audio:not([controls]) {
  */
 
 img {
-   border-style: none;
+    border-style: none;
 }
 
 /**
@@ -242,7 +319,7 @@ img {
  */
 
 svg:not(:root) {
-   overflow: hidden;
+    overflow: hidden;
 }
 
 /* Forms
@@ -258,237 +335,127 @@ input,
 optgroup,
 select,
 textarea {
-   font-family: sans-serif; /* 1 */
-   font-size: 100%; /* 1 */
-   line-height: 1.15; /* 1 */
-   margin: 0; /* 2 */
-   color: var(--text-color); /* Amer Custom CSS */
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    color: var(--black);
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
 button,
-input { /* 1 */
-   overflow: visible;
+input {
+    overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
 button,
-select { /* 1 */
-   text-transform: none;
+select {
+    text-transform: none;
 }
 
-/**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-
 button,
-html [type="button"], /* 1 */
+html [type="button"],
 [type="reset"],
 [type="submit"] {
-   -webkit-appearance: button; /* 2 */
+    -webkit-appearance: button;
 }
-
-/**
- * Remove the inner border and padding in Firefox.
- */
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-   border-style: none;
-   padding: 0;
+    border-style: none;
+    padding: 0;
 }
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-   outline: 1px dotted ButtonText;
+    outline: 1px dotted ButtonText;
 }
-
-/**
- * Correct the padding in Firefox.
- */
 
 fieldset {
-   padding: 0.35em 0.75em 0.625em;
+    padding: 0.35em 0.75em 0.625em;
 }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
 
 legend {
-   box-sizing: border-box; /* 1 */
-   color: inherit; /* 2 */
-   display: table; /* 1 */
-   max-width: 100%; /* 1 */
-   padding: 0; /* 3 */
-   white-space: normal; /* 1 */
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
 }
 
-/**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 
 progress {
-   display: inline-block; /* 1 */
-   vertical-align: baseline; /* 2 */
+    display: inline-block;
+    vertical-align: baseline;
 }
-
-/**
- * Remove the default vertical scrollbar in IE.
- */
 
 textarea {
-   overflow: auto;
+    overflow: auto;
 }
-
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
- */
 
 [type="checkbox"],
 [type="radio"] {
-   box-sizing: border-box; /* 1 */
-   padding: 0; /* 2 */
+    box-sizing: border-box;
+    padding: 0;
 }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-   height: auto;
+    height: auto;
 }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 
 [type="search"] {
-   -webkit-appearance: textfield; /* 1 */
-   outline-offset: -2px; /* 2 */
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
 }
-
-/**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
- */
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-   -webkit-appearance: none;
+    -webkit-appearance: none;
 }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 
 ::-webkit-file-upload-button {
-   -webkit-appearance: button; /* 1 */
-   font: inherit; /* 2 */
+    -webkit-appearance: button;
+    font: inherit;
 }
 
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- */
-
-details, /* 1 */
+details,
 menu {
-   display: block;
+    display: block;
 }
-
-/*
- * Add the correct display in all browsers.
- */
 
 summary {
-   display: list-item;
+    display: list-item;
 }
-
-/* Scripting
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- */
 
 canvas {
-   display: inline-block;
+    display: inline-block;
 }
-
-/**
- * Add the correct display in IE.
- */
 
 template {
-   display: none;
+    display: none;
 }
-
-/* Hidden
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10-.
- */
 
 [hidden] {
-   display: none;
+    display: none;
 }
-
-/* Disable
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10-.
- */
 
 [disabled] {
-   pointer-events: none;
-   opacity: .4;
-   @extend %not-selective;
+    pointer-events: none;
+    opacity: .4;
+    @extend %not-selective;
 }
-
-/* Input Elements and Buttons
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10-.
- */
 
 button,
 input[type="button"],
 input[type="submit"],
 input[type="file"],
 input[type="reset"] {
-   cursor: pointer;
+    cursor: pointer;
 }
 
 input[type='search'],
@@ -499,8 +466,8 @@ input[type='username'],
 input[type='text'],
 input[type='email'],
 input[type='password'] {
-   border: none;
-   outline: none;
+    border: none;
+    outline: none;
 }
 
 input[type='url'],
@@ -509,19 +476,19 @@ input[type='number'],
 input[type='email'],
 input[type='username'],
 input[type='password'] {
-   direction: ltr;
+    direction: ltr;
 
-   &::placeholder {
-      direction: rtl;
-   }
+    &::placeholder {
+        direction: rtl;
+    }
 }
 
 input[type='number'] {
-   -moz-appearance: textfield;
+    -moz-appearance: textfield;
 
-   &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-   }
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 

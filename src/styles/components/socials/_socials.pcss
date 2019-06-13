@@ -1,0 +1,65 @@
+/* @define social media */
+
+.social-networks {
+    @extend %align-row;
+    @extend %align-items-center;
+    margin: calc(2 * var(--gutter)) 0;
+    width: 200px;
+    justify-content: space-between;
+
+    > a {
+        @extend %position-relative;
+        display: inline-flex;
+    }
+
+    .icon {
+        color: var(--active);
+    }
+}
+
+.icon-telegram {
+
+    &:hover {
+        color: #0088cc;
+    }
+}
+
+.icon-twitter {
+
+    &:hover {
+        color: #00aced;
+    }
+}
+
+.icon-linkedin {
+
+    &:hover {
+        color: #0077B5;
+    }
+}
+
+.icon-github {
+
+    &:hover {
+        color: #000000;
+    }
+}
+
+.icon-instagram {
+
+    &:hover {
+        display: inline-block;
+        background: #000000;
+        color: #ffffff;
+        mix-blend-mode: lighten;
+
+        &:after {
+            content: "";
+            display: block;
+            @extend %position-f-w;
+            background: linear-gradient(135deg, #cb09ec, #ec2897, #f94f4f, #f9844a, #fbe3a3);
+            pointer-events: none;
+            mix-blend-mode: multiply
+        }
+    }
+}
