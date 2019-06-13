@@ -6,8 +6,10 @@ import ircLogo from '~/staticImages/iran-react-community.png';
 import ircLogoPad from '~/staticImages/irc-logo-pad.png';
 
 const {
-    menu: {
-        aboutUs,
+    components: {
+        menu: {
+            aboutUs,
+        },
     },
     page:{
         aboutUs: {

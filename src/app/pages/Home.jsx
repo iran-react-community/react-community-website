@@ -5,8 +5,10 @@ import contentWords from '~/utils/contentWords';
 import styles from "~/styles/styles.pcss";
 
 const {
-    menu: {
-        home,
+    components: {
+        menu: {
+            home,
+        },
     },
     page: {
         home: {

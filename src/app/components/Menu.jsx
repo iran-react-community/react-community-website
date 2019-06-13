@@ -15,7 +15,7 @@ const {
     home,
     contactUs,
     aboutUs
-} = contentWords.menu;
+} = contentWords.components.menu;
 
 const Menu = () => (
     <nav className={styles.menu}>
