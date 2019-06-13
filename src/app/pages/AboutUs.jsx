@@ -1,7 +1,8 @@
 import React, {memo} from 'react';
 import Helmet from 'react-helmet';
 import contentWords from '~/utils/contentWords';
-import styles from "~/styles/styles.pcss";
+import css from 'classnames';
+import styles from '~/styles/styles.pcss';
 import ircLogo from '~/staticImages/iran-react-community.png';
 import ircLogoPad from '~/staticImages/irc-logo-pad.png';
 
@@ -57,7 +58,7 @@ const AboutUs = () => (
         <ul className={styles['about-us__socials-list']}>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.telegramGroup.link}>
-                    <i className={styles['icon-telegram']}/>
+                    <i className={css(styles.icon, styles['icon-telegram'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -70,7 +71,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.telegramChannel.link}>
-                    <i className={styles['icon-telegram']}/>
+                    <i className={css(styles.icon, styles['icon-telegram'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -83,7 +84,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.virgool.link}>
-                    <i className={styles['icon-quotes-right']}/>
+                    <i className={css(styles.icon, styles['icon-quotes-right'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -96,7 +97,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.github.link}>
-                    <i className={styles['icon-github']}/>
+                    <i className={css(styles.icon, styles['icon-github'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -115,7 +116,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.twitter.link}>
-                    <i className={styles['icon-twitter']}/>
+                    <i className={css(styles.icon, styles['icon-twitter'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -128,7 +129,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.instagram.link}>
-                    <i className={styles['icon-instagram']}/>
+                    <i className={css(styles.icon, styles['icon-instagram'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -138,7 +139,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.linkedInGroup.link}>
-                    <i className={styles['icon-linkedin']}/>
+                    <i className={css(styles.icon, styles['icon-linkedin'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>
@@ -151,7 +152,7 @@ const AboutUs = () => (
             </li>
             <li className={styles['about-us__socials-list--item']}>
                 <a href={contributing.list.aparat.link}>
-                    <i className={styles['icon-play']}/>
+                    <i className={css(styles.icon, styles['icon-play'])}/>
                 </a>
                 <div className={styles['about-us__socials-list--content']}>
                     <h3 className={styles['about-us__socials-list--content--title']}>

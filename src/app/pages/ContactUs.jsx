@@ -4,6 +4,7 @@ import Socials from '~/app/components/Socials';
 import Paper from '~/app/components/Paper';
 import contentWords from '~/utils/contentWords';
 import styles from "~/styles/styles.pcss";
+import css from "classnames";
 
 const {
     page: {
@@ -22,12 +23,12 @@ const ContactUs = () => (
         <Socials/>
         <div className={styles['contact-us__paper-wrapper']}>
             <Paper>
-                <i className={styles['icon-location']}/>
+                <i className={css(styles.icon, styles['icon-location'])}/>
                 <span>{address}</span>
                 <span>{city}</span>
             </Paper>
             <Paper>
-                <i className={styles['icon-mail']}/>
+                <i className={css(styles.icon, styles['icon-mail'])}/>
                 <span>{mail}</span>
                 <a href={`mailto:${email}`}>{email}</a>
             </Paper>
