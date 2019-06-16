@@ -1,0 +1,16 @@
+node_modules
+.idea
+.vscode
+assets
+.git
+.gitignore
+.editorconfig
+.env.example
+.flowconfig
+.prettierrc
+.travis.yml
+CHANGELOG.md
+Dockerfile
+LICENSE
+README.md
+yarn.lock
