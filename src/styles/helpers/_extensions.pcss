@@ -1,0 +1,169 @@
+/** @define extensions; */
+/* #declare radius; */
+%radius-circle {
+  border-radius: 50%;
+}
+
+%radius-100px {
+  border-radius: 100px;
+}
+
+%radius-3px {
+  border-radius: 3px;
+}
+
+%radius-15px {
+  border-radius: 15px;
+}
+
+/* #declare flexbox layout; */
+
+%align-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%align-row-rev {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+%align-col {
+  display: flex;
+  flex-direction: column;
+}
+
+%align-col-rev {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+%align-items-center {
+  align-items: center;
+}
+
+%justify-content-center {
+  justify-content: center;
+}
+
+%row-flex-center-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+%col-flex-center-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%center {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* #declare text behaviour; */
+%not-appear {
+  appearance: none;
+  background: none;
+  overflow: hidden;
+  outline: none;
+  border: none;
+}
+
+%not-selective {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+%selective {
+  -webkit-tap-highlight-color: initial;
+  -webkit-touch-callout: initial;
+  user-select: initial;
+}
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%img-alt {
+  display: block;
+  color: transparent;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjEyNDZBRUU5RDVENTExRTc5OTY5RUVGMzE3REJDREE3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjEyNDZBRUVBRDVENTExRTc5OTY5RUVGMzE3REJDREE3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTI0NkFFRTdENUQ1MTFFNzk5NjlFRUYzMTdEQkNEQTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTI0NkFFRThENUQ1MTFFNzk5NjlFRUYzMTdEQkNEQTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5Yir6nAAAB00lEQVR42mL8//8/w0ACJoYBBix2js4FSiqq3Tw8vCz0tPjLl89/7t25Xcrs5OJ+mN6WgwAbGzsTNw+PCwuQgFnOSGc3/Ad5fMDTANUdcObUCfn79+6eA8bxbxC+c/vmfro6QFhEdIOikrIhKHhBWEVV3QHooPN0c4C0jKw+upiomJjOgJYDjHjSN9EOuHThXMH1q5fnEFL36OH9Q+hiz58/PUqxA5RV1Lo1tXWTL5w7E45PHTTOL3z98uUPCAMT4UGQGEUOABpyAFZeaGnrLgeldHzqQYkQqJ4VhPFZTpQDQJbJySnYwUswdnZGYGhcp1s5IC4usRdkKbKYoJAQ5+OHD26TahlQzx2SHABKeLLyCsrY5IDiKsQkSlgoPnv65Bk2s/A6QFJKuh6fPDGJEmQ5KMqkpGUkSYoCkO9ExcQFCPkOX6IEOU5P3/A+KMpISgNQVycRVa3iSJRXLl1sBzkOPf0Q5QABQcGFhDTiS5Sg0NPR068gxgyMhsi5M6dsjEzM7ElN4aBECarjoWmD/GwoKye/eUDbA8QkvGHVKh51AAvW9sOICoFfv379Z2NjY4TlYXoCUIOFmZub+yOw9eoCdAQTvS2/e+dWKeOI7x0DBBgAYMSs92tcRNkAAAAASUVORK5CYII=') no-repeat center center transparent;
+  background-size: 25px 25px;
+  @extend %not-selective;
+}
+
+/* #declare positioning */
+%position-relative {
+  position: relative;
+}
+
+%position-absolute {
+  position: absolute;
+}
+
+%position-c-c {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%position-f-w {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* #declare motion speed ; */
+%motion-fast {
+  transition: all 150ms;
+}
+
+%motion-mid {
+  transition: all 350ms;
+}
+
+%motion-slow {
+  transition: all 550ms;
+}
+
+%motion-very-slow {
+  transition: all 1500ms;
+}
+
+/** #declare matrix rotation and flip; */
+%turn-left {
+  transform: matrix(0, -1, 1, 0, 0, 0);
+}
+
+%turn-right {
+  transform: matrix(0, 1, -1, 0, 0, 0);
+}
+
+%no-flip {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+%flip {
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+
+%flip-ver {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+%flip-hor {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+

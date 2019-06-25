@@ -1,0 +1,90 @@
+.about-us {
+    @extend %align-col;
+    @extend %align-items-center;
+    background: var(--black);
+
+    &__section {
+        width: var(--about-us-width);
+        margin: 30px 0;
+
+        &--title {
+            font-weight: bold;
+            font-size: var(--title-font-size);
+            text-align: center;
+            color: var(--white);
+        }
+
+        &--paragraph {
+            font-size: var(--text-font-size);
+            text-align: justify;
+            margin: var(--gutter) 0;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin: 30px auto 20px;
+        max-width: 200px;
+        width: auto;
+    }
+
+    &__socials-list {
+        width: calc(var(--about-us-width) - 100px);
+        @extend %align-col;
+
+        &--item {
+            @extend %align-row;
+            margin-bottom: calc(2*var(--gutter));
+
+            > a {
+                color: var(--active);
+                @extend %position-relative;
+                display: inline-flex;
+            }
+        }
+
+        &--content {
+            @extend %align-col;
+            font-size: var(--text-font-size);
+            margin-right: var(--gutter);
+
+            &--title {
+                font-weight: bold;
+                font-size: var(--list-font-size);
+                margin-bottom: var(--unit);
+            }
+
+            &--hint {
+                color: var(--passive-text-color);
+
+                &--steps {
+                    list-style-type: decimal;
+                    padding-right: calc(2*var(--gutter));
+
+                    > * {
+                        text-align: justify;
+                        margin-bottom: var(--gutter);
+                    }
+                }
+            }
+        }
+    }
+
+    &__logo-pad {
+        width: 100%;
+    }
+}
+
+.icon-quotes-right {
+
+    &:hover {
+        color: var(--yell);
+    }
+}
+
+.icon-play {
+
+    &:hover {
+        color: var(--red);
+    }
+}

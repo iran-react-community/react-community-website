@@ -1,0 +1,31 @@
+/* @define menu */
+.menu {
+    @extend %align-row;
+    @extend %align-items-center;
+    background: var(--menu-bg);
+    padding: 0 var(--gutter);
+    font-size: 16px;
+
+    &__item {
+        padding: var(--gutter);
+        margin-left: var(--gutter);
+        color: var(--black);
+
+        &:first-child {
+            padding-right: 0;
+        }
+
+        &--the-last {
+            margin-right: auto;
+        }
+    }
+
+    &__active {
+        color: var(--active);
+    }
+
+    &__logo {
+        height: 60px;
+        width: auto;
+    }
+}
