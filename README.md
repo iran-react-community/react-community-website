@@ -1,6 +1,6 @@
 <p align="center"> 
 <a href='http://iran-react-community.github.io'>
-<img src="https://github.com/iran-react-community/iran-react-community.github.io/raw/master/img/iran-react-community-logo.png" style="display:block;" height="60" alt='Iran React Community' aria-label='Iran React Community Web Site'/>
+<img src="https://iran-react-community.github.io/static/logoirc-d2103aac1c673df16b2c6909fc07ede1.jpeg" style="display:block;" height="60" alt='Iran React Community' aria-label='Iran React Community Web Site'/>
 <br/>
 وب سایت جامعه ری‌اکت ایران
 </a>
@@ -8,7 +8,7 @@
 
 
 
-<h3 lang="fa" dir="rtl" align="right">جامعه ری‌اکـت ایـران چیست؟</h3>
+<h3 lang="fa" dir="rtl" align="right">جامعه ری‌اکت ایران چیست؟</h3>
 <p lang="fa" dir="rtl" align="right">
 جامعه ری‌اکت ایران یک گروه تخصصی در حوزه نرم افزار است که در تاریخ ۱۱ بهمن ۱۳۹۷ با هدف آشنایی و مشارکت توسعه‌دهندگان 
 و علاقمندان به کتابخانه متن باز ری‌اکت جی اس و ری‌اکت نیتیو به کمک جمعی از فعالان این حوزه شروع به کار کرد.  
@@ -52,7 +52,7 @@
 
 
 
-<h3 lang="fa" dir="rtl" align="right">نحـوه عضویـت و مشـارکت</h3>
+<h3 lang="fa" dir="rtl" align="right">نحوه عضویت و مشارکت</h3>
 <p lang="fa" dir="rtl" align="right">
 از آنجایی که کلیه فعالیت‌ها و محتوا‌ها به فعالیت و مشارکت تک تک اعضای این جامعه بستگی دارد، رشد و پیشرفت آن نیز به همه اعضای آن متعلق خواهد بود.
 </p>
